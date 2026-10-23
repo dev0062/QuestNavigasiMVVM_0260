@@ -95,6 +95,14 @@ fun FormIsian(
                     .width(250.dp),
                 label = { Text(text = "Alamat") }
             )
+            Spacer(modifier = Modifier.height(30.dp))
+            Button(
+                modifier = Modifier.fillMaxWidth(1f)
+                    .padding(all = 25.dp),
+                onClick = { onSubmitBtnClick() }
+            ){
+                Text(stringResource(id = R.string.submit))
+            }
         }
     }
 }
