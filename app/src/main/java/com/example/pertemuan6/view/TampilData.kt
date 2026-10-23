@@ -35,4 +35,16 @@ fun TampilData(
         Pair(stringResource(id = R.string.alamat), "yogyakarta"),
         Pair(stringResource(id = R.string.jenis_Kelamin), "Lainnya")
     )
+    Scaffold(
+        modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.tampil), color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
+    ) { isiRuang ->
+    }
 }
