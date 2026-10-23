@@ -49,6 +49,22 @@ fun FormIsian(
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            OutlinedTextField(
+                value = "",
+                onValueChange = {},
+                singleLine = true,
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .width(250.dp),
+                label = { Text(text = "Nama Lengkap") }
+            )
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .width(250.dp),
+                thickness = DividerDefaults.Thickness,
+                color = Color.Red
+            )
         }
     }
 }
