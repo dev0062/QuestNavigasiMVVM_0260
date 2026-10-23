@@ -14,7 +14,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Pertemuan6Theme {
+                DataApp()
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DataAppPreview() {
+    Pertemuan6Theme {
+        DataApp()
     }
 }
