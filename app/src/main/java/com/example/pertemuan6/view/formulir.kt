@@ -65,6 +65,27 @@ fun FormIsian(
                 thickness = DividerDefaults.Thickness,
                 color = Color.Red
             )
+            Row {
+                jenisK.forEach { item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = false,
+                            onClick = { }
+                        )
+                        Text(
+                            text = item,
+                            modifier = Modifier.padding(start = 10.dp)
+                        )
+                    }
+                }
+            }
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Red
+            )
         }
     }
 }
