@@ -26,6 +26,25 @@ fun DataApp(
             startDestination = Navigasi.FormulirSaya.name,
             modifier = Modifier.padding(isiRuang)
         ) {
+            composable(route = Navigasi.FormulirSaya.name) {
+                FormIsian(
+                    //pilihanJK = JenisK.map { id -> konteks.resources.getString(id) },
+                    onSubmitBtnClick = {
+                        navController.navigate(Navigasi.Detail.name)
+                    }
+                )
+            }
+            composable(route = Navigasi.Detail.name) {
+                TampilData(
+                    onBackBtnClick = { cancelAndBackToFormulirSaya(navController) }
+                )
+            }
         }
     }
+}
+
+private fun cancelAndBackToFormulirSaya(
+    navController: NavHostController
+) {
+    navController.popBackStack(Navigasi.FormulirSaya.name, inclusive = false)
 }
